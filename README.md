@@ -8,7 +8,7 @@
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
-This plugin allows you to embed a Chatwood widget on every front end page of your WordPress.
+This plugin allows you to embed a Chatwoot widget on every front end page of your WordPress.
 
 ## Description ##
 
