@@ -104,7 +104,7 @@ function chatwoot_options_page() {
   </table>
   <table>
   <tr valign="top">
-  <th scope="row"><label for="chatwootSiteToken">ChatWoot URL</label></th>
+  <th scope="row"><label for="chatwootSiteToken">Chatwoot URL</label></th>
   <td><input type="text" id="chatwootSiteURL" name="chatwootSiteURL" value="<?php echo get_option('chatwootSiteURL'); ?>" /></td>
   </tr>
   </table>
