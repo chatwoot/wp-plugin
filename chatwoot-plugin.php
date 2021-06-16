@@ -92,7 +92,6 @@ function chatwoot_register_settings() {
 function chatwoot_options_page() {
   ?>
   <div>
-  <?php screen_icon(); ?>
   <h2>Chatwoot Settings</h2>
   <form method="post" action="options.php">
   <?php settings_fields( 'chatwoot-plugin-options' ); ?>
