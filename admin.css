@@ -1,3 +1,32 @@
-#chatwootSiteURL, #chatwootSiteToken {
-    min-width: 400px;
+.form--input label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.form--input input {
+  margin-bottom: 16px;
+  min-width: 400px;
+}
+
+.form--input select {
+  margin-bottom: 16px;
+  min-width: 400px;
+}
+
+.chatwoot--form {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  margin-right: 16px;
+}
+
+.chatwoot--form .submit {
+  margin: 0;
+  padding: 0;
+}
+
+.chatwoot--form hr {
+  margin-bottom: 24px;
+  margin-top: 16px;
 }
