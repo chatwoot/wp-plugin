@@ -1,11 +1,10 @@
-# Copyright (C) 2021 YOUR NAME HERE
-# This file is distributed under the same license as the Chatwoot Personalize Integration package.
+# Copyright (C) 2021 antpb
+# This file is distributed under the same license as the Chatwoot Plugin package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Chatwoot Personalize Integration 0.1.0\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/chatwoot-plugin\n"
-"POT-Creation-Date: 2021-01-26 19:47:24+00:00\n"
+"Project-Id-Version: Chatwoot Plugin 0.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/chatwoot-plugin\n"
+"POT-Creation-Date: 2021-09-08 08:48:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,21 +25,23 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 
 #. Plugin Name of the plugin/theme
-msgid "Chatwoot Personalize Integration"
+msgid "Chatwoot Plugin"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "PLUGIN SITE HERE"
+msgid "https://www.chatwoot.com/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "PLUGIN DESCRIPTION HERE"
+msgid ""
+"Chatwoot Plugin for WordPress. This plugin helps you to quickly integrate "
+"Chatwoot live-chat widget on Wordpress websites."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "YOUR NAME HERE"
+msgid "antpb"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "YOUR SITE HERE"
+msgid "chatwoot.com"
 msgstr ""

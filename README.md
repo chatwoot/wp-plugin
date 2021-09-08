@@ -1,19 +1,14 @@
 # Chatwoot Plugin #
-**Contributors:** antpb  
-**Tags:** comments, spam  
-**Requires at least:** 4.5  
-**Tested up to:** 5.5.3  
-**Requires PHP:** 5.6  
-**Stable tag:** 0.1.0  
-**License:** GPLv2 or later  
-**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
+**Contributors:** antpb, pranavrajs
+**Tags:** comments, live-chat
+**Requires at least:** 4.5
+**Tested up to:** 5.8
+**Requires PHP:** 5.6
+**Stable tag:** 0.2.0
+**License:** GPLv2 or later
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows you to embed a Chatwoot widget on every front end page of your WordPress.
-
-## Description ##
-
-A few notes about the sections above:
-
+This plugin allows you to add a Chatwoot live-chat widget on every page of your WordPress website. This plugin also allows you customize the widget by providing options to select locale, position, design type etc.
 
 ## Installation ##
 
@@ -22,17 +17,16 @@ This section describes how to install the plugin and get it working.
 e.g.
 
 1. Download Release Zip and use the WordPress plugin upload options.
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Go to Settings > Chatwoot Settings
-
-## Frequently Asked Questions ##
-
-### A question that someone might have ###
-
-An answer to that question.
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Go to Settings > Chatwoot Settings
 
 ## Changelog ##
 
+### 0.2.0 ###
+- Add options for customizing the plugin
+- Allow admin to select the locale from the settings panel.
+- Update the admin settings styles.
+
 ### 0.1.0 ###
-Initializes Plugin
-Simple Embed based on Options saved
+- Initialize Plugin
+- Simple Embed based on Options saved
