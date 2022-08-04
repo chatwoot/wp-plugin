@@ -43,8 +43,40 @@ add_action( 'wp_enqueue_scripts', 'chatwoot_load' );
  *
  * @return {void}.
  */
+ 
+
 function chatwoot_load() {
 
+  if (is_user_logged_in()) {
+    $current_user = wp_get_current_user();
+  }
+  if (!isset($current_user)) {
+    $chatwoot_current_user_email = "";
+    $chatwoot_current_user_name = "";
+    $chatwoot_current_user_uuid = "";
+  } else {
+        $email = $current_user->user_email;
+        $nickname = $current_user->display_name;
+        $user_pass = $current_user->user_pass;
+        $user_uuid = $current_user->user_login;
+        if (!empty($email)) {
+          $chatwoot_current_user_email = $email;
+        } else {
+          $chatwoot_current_user_email = "";
+        }
+        if (!empty($nickname)) {
+          $chatwoot_current_user_name = $nickname;
+        } else {
+          $chatwoot_current_user_name = "";
+        }
+        if (!empty($user_uuid)){
+            $chatwoot_current_user_uuid = $user_uuid;
+        }
+        else{
+            $chatwoot_current_user_uuid = '';
+        }
+        
+  }
   // Get our site options for site url and token.
   $chatwoot_url = get_option('chatwootSiteURL');
   $chatwoot_token = get_option('chatwootSiteToken');
@@ -52,6 +84,7 @@ function chatwoot_load() {
   $chatwoot_widget_type = get_option('chatwootWidgetType');
   $chatwoot_widget_position = get_option('chatwootWidgetPosition');
   $chatwoot_launcher_text = get_option('chatwootLauncherText');
+  
 
   // Localize our variables for the Javascript embed code.
   wp_localize_script('chatwoot-client', 'chatwoot_token', $chatwoot_token);
@@ -60,6 +93,9 @@ function chatwoot_load() {
   wp_localize_script('chatwoot-client', 'chatwoot_widget_type', $chatwoot_widget_type);
   wp_localize_script('chatwoot-client', 'chatwoot_launcher_text', $chatwoot_launcher_text);
   wp_localize_script('chatwoot-client', 'chatwoot_widget_position', $chatwoot_widget_position);
+  wp_localize_script('chatwoot-client', 'chatwoot_current_user_email', $chatwoot_current_user_email);
+  wp_localize_script('chatwoot-client', 'chatwoot_current_user_name', $chatwoot_current_user_name);
+  wp_localize_script('chatwoot-client', 'chatwoot_current_user_uuid', $chatwoot_current_user_uuid);
 }
 
 add_action('admin_menu', 'chatwoot_setup_menu');

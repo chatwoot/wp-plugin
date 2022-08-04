@@ -15,3 +15,18 @@ window.chatwootSettings = {
     window.chatwootSDK.run({ websiteToken: chatwoot_token, baseUrl: chatwoot_url })
   }
 })(document,"script");
+
+(function(d,t) {
+var user_uuid = chatwoot_current_user_uuid
+if(user_uuid !== ""){
+      function sendChatwootData(){
+          window.addEventListener('chatwoot:ready', function () {
+          	window.$chatwoot.setUser(chatwoot_current_user_uuid, {
+          		email: chatwoot_current_user_email,
+          		name: chatwoot_current_user_name
+          	});
+          });
+        }
+        sendChatwootData();
+}
+})(document,"script");
