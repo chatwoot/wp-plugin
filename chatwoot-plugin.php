@@ -56,6 +56,11 @@ function chatwoot_load() {
   $chatwoot_launcher_text = get_option('chatwootLauncherText');
 
 	// Localize our variables for the Javascript embed code.
+  /**
+   * 3rd parameter must be an array
+   * 
+   * @since 0.2.1
+   */
 	wp_localize_script( 'chatwoot-client', 'chatwoot_token', array( $chatwoot_token ) );
 	wp_localize_script( 'chatwoot-client', 'chatwoot_url', array( $chatwoot_url ) );
 	wp_localize_script( 'chatwoot-client', 'chatwoot_widget_locale', array( $chatwoot_widget_locale ) );
