@@ -47,13 +47,13 @@ add_action( 'wp_enqueue_scripts', 'chatwoot_load' );
  */
 function chatwoot_load() {
 
-  // Get our site options for site url and token.
-  $chatwoot_url = get_option('chatwootSiteURL');
-  $chatwoot_token = get_option('chatwootSiteToken');
-  $chatwoot_widget_locale = get_option('chatwootWidgetLocale');
-  $chatwoot_widget_type = get_option('chatwootWidgetType');
-  $chatwoot_widget_position = get_option('chatwootWidgetPosition');
-  $chatwoot_launcher_text = get_option('chatwootLauncherText');
+	// Get our site options for site url and token.
+	$chatwoot_url             = get_option( 'chatwootSiteURL' );
+	$chatwoot_token           = get_option( 'chatwootSiteToken' );
+	$chatwoot_widget_locale   = get_option( 'chatwootWidge tLocale' );
+	$chatwoot_widget_type     = get_option( 'chatwootWidgetType' );
+	$chatwoot_widget_position = get_option( 'chatwootWidgetPosition' );
+	$chatwoot_launcher_text   = get_option( 'chatwootLauncherText' );
 
 	// Localize our variables for the Javascript embed code.
   /**
@@ -69,7 +69,7 @@ function chatwoot_load() {
 	wp_localize_script( 'chatwoot-client', 'chatwoot_widget_position', array( $chatwoot_widget_position ) );
 }
 
-add_action('admin_menu', 'chatwoot_setup_menu');
+add_action( 'admin_menu', 'chatwoot_setup_menu' );
 /**
  * Set up Settings options page.
  *
