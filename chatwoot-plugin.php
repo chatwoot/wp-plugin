@@ -55,13 +55,13 @@ function chatwoot_load() {
   $chatwoot_widget_position = get_option('chatwootWidgetPosition');
   $chatwoot_launcher_text = get_option('chatwootLauncherText');
 
-  // Localize our variables for the Javascript embed code.
-  wp_localize_script('chatwoot-client', 'chatwoot_token', $chatwoot_token);
-  wp_localize_script('chatwoot-client', 'chatwoot_url', $chatwoot_url);
-  wp_localize_script('chatwoot-client', 'chatwoot_widget_locale', $chatwoot_widget_locale);
-  wp_localize_script('chatwoot-client', 'chatwoot_widget_type', $chatwoot_widget_type);
-  wp_localize_script('chatwoot-client', 'chatwoot_launcher_text', $chatwoot_launcher_text);
-  wp_localize_script('chatwoot-client', 'chatwoot_widget_position', $chatwoot_widget_position);
+	// Localize our variables for the Javascript embed code.
+	wp_localize_script( 'chatwoot-client', 'chatwoot_token', array( $chatwoot_token ) );
+	wp_localize_script( 'chatwoot-client', 'chatwoot_url', array( $chatwoot_url ) );
+	wp_localize_script( 'chatwoot-client', 'chatwoot_widget_locale', array( $chatwoot_widget_locale ) );
+	wp_localize_script( 'chatwoot-client', 'chatwoot_widget_type', array( $chatwoot_widget_type ) );
+	wp_localize_script( 'chatwoot-client', 'chatwoot_launcher_text', array( $chatwoot_launcher_text ) );
+	wp_localize_script( 'chatwoot-client', 'chatwoot_widget_position', array( $chatwoot_widget_position ) );
 }
 
 add_action('admin_menu', 'chatwoot_setup_menu');
