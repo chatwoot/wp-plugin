@@ -39,6 +39,8 @@ add_action( 'wp_enqueue_scripts', 'chatwoot_load' );
 /**
  * Initialize embed code options.
  *
+ * @link https://developer.wordpress.org/reference/functions/wp_localize_script/
+ *
  * @since 0.1.0
  *
  * @return {void}.
