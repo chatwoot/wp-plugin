@@ -4,9 +4,9 @@
 **Requires at least:** 4.5  
 **Tested up to:** 5.8  
 **Requires PHP:** 5.6  
-**Stable tag:** 0.2.1  
-**License:** GPLv2 or later  
-**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
+**Stable tag:** 0.2.2
+**License:** GPLv2 or later
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description ##
 
@@ -29,6 +29,9 @@ You need an account at a self-hosted Chatwoot or Chatwoot Cloud (https://app.cha
 Live-chat widget supports multiple languages, you can select
 
 ## Changelog ##
+
+### 0.2.2 ###
+- Add option to disable Chatwoot widget for logged-out users
 
 ### 0.2.0 ###
 - Add options for customizing the plugin
