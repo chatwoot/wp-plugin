@@ -152,7 +152,7 @@ function chatwoot_options_page() {
             value="1"
             <?php checked(get_option('chatwootLoggedInOnly'), '1'); ?>
           />
-          Display chatbox only to logged-in users
+          Display widget only to logged-in users
         </label>
       </div>
       <hr />
