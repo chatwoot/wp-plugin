@@ -6,7 +6,7 @@
  * Author:          antpb
  * Author URI:      chatwoot.com
  * Text Domain:     chatwoot-plugin
- * Version:         0.2.0
+ * Version:         0.2.2
  *
  * @package         chatwoot-plugin
  */
