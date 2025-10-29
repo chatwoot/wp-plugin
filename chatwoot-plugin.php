@@ -32,6 +32,13 @@ function admin_styles() {
  * @return {void}.
  */
 function chatwoot_assets() {
+    // Check if chatbox should be displayed only to logged-in users
+    $logged_in_only = get_option('chatwootLoggedInOnly');
+
+    if ($logged_in_only === '1' && !is_user_logged_in()) {
+        return; // Don't load the chatbox if setting is enabled and user is not logged in
+    }
+
     wp_enqueue_script( 'chatwoot-client', plugins_url( '/js/chatwoot.js' , __FILE__ ) );
 }
 
@@ -44,6 +51,12 @@ add_action( 'wp_enqueue_scripts', 'chatwoot_load' );
  * @return {void}.
  */
 function chatwoot_load() {
+  // Check if chatbox should be displayed only to logged-in users
+  $logged_in_only = get_option('chatwootLoggedInOnly');
+
+  if ($logged_in_only === '1' && !is_user_logged_in()) {
+      return; // Don't localize scripts if setting is enabled and user is not logged in
+  }
 
   // Get our site options for site url and token.
   $chatwoot_url = get_option('chatwootSiteURL');
@@ -89,6 +102,7 @@ function chatwoot_register_settings() {
   add_option('chatwootWidgetType', 'standard');
   add_option('chatwootWidgetPosition', 'right');
   add_option('chatwootLauncherText', '');
+  add_option('chatwootLoggedInOnly', '0');
 
   register_setting('chatwoot-plugin-options', 'chatwootSiteToken' );
   register_setting('chatwoot-plugin-options', 'chatwootSiteURL');
@@ -96,6 +110,7 @@ function chatwoot_register_settings() {
   register_setting('chatwoot-plugin-options', 'chatwootWidgetType' );
   register_setting('chatwoot-plugin-options', 'chatwootWidgetPosition' );
   register_setting('chatwoot-plugin-options', 'chatwootLauncherText' );
+  register_setting('chatwoot-plugin-options', 'chatwootLoggedInOnly' );
 }
 
 /**
@@ -126,6 +141,19 @@ function chatwoot_options_page() {
           name="chatwootSiteURL"
           value="<?php echo get_option('chatwootSiteURL'); ?>"
         />
+      </div>
+      <hr />
+
+      <div class="form--input">
+        <label for="chatwootLoggedInOnly">
+          <input
+            type="checkbox"
+            name="chatwootLoggedInOnly"
+            value="1"
+            <?php checked(get_option('chatwootLoggedInOnly'), '1'); ?>
+          />
+          Display chatbox only to logged-in users
+        </label>
       </div>
       <hr />
 
